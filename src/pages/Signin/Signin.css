@@ -53,22 +53,27 @@
     cursor: pointer;
 }
 
+
 .signin-form {
     background-color: #333333 !important;
-    border: 0;
-    outline: none;
+    border: none;
+
     height: 3rem;
     width: 100%;
     color: #ffffff;
     border-radius: 5px;
-    padding-left: 10px;
 
+    outline: none;
 }
 
-form-check {
+.signin-p {
+    font-size: 13px;
+}
+
+/* form-check {
     background-color: #333333;
-}
-
+} */
+/* 
 .form-check-input {
     color: #333333;
     background-color: #333333;
@@ -81,7 +86,7 @@ form-check {
     border-color: #2c2d2e;
     outline: none;
     border: none;
-}
+} */
 
 .signin-btn {
     background-color: #e50914;

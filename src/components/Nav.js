@@ -7,13 +7,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-
-const pages = ["Home", "TV Shows", "Movies", "NEws & Popular", "My List"];
-const settings = ["Profile", "Account", "Logout"];
+import { Link } from "react-router-dom";
+import logo from "../assets/logonet.png";
 
 function Nav() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -49,10 +47,6 @@ function Nav() {
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
                 sx={{
                   mr: 2,
                   display: { xs: "none", md: "flex" },
@@ -63,12 +57,9 @@ function Nav() {
                   textDecoration: "none",
                 }}
               >
-                <a class="navbar-brand" href="#">
-                  <img
-                    src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
-                    alt="Netflix Logo"
-                  />
-                </a>
+                <Link class="navbar-brand" to="/">
+                  <img src={logo} alt="Netflix Logo" />
+                </Link>
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -87,12 +78,11 @@ function Nav() {
                   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: "bottom",
-                    horizontal: "right",
                   }}
                   keepMounted
                   transformOrigin={{
                     vertical: "top",
-                    horizontal: "left",
+                    horizontal: "right",
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
@@ -100,19 +90,25 @@ function Nav() {
                     display: { xs: "block", md: "none" },
                   }}
                 >
-                  {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
-                    </MenuItem>
-                  ))}
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">
+                      <Link to={"/netflix"}>Home</Link>
+                    </Typography>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">
+                      <Link to={"/moviesadd"}>Movies</Link>
+                    </Typography>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">
+                      <Link to={"/movieslist"}>MoviesList</Link>
+                    </Typography>
+                  </MenuItem>
                 </Menu>
               </Box>
 
               <Typography
-                variant="h5"
-                noWrap
-                component="a"
-                href=""
                 sx={{
                   mr: 2,
                   display: { xs: "flex", md: "none" },
@@ -124,34 +120,53 @@ function Nav() {
                   textDecoration: "none",
                 }}
               >
-                <a class="navbar-brand" href="#">
+                <Link class="navbar-brand" to="/">
                   <img
                     src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
                     alt="Netflix Logo"
                   />
-                </a>
+                </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                {pages.map((page) => (
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      my: 3,
-                      fontWeight: 500,
-                      color: "#fff",
-                      display: "block",
-                    }}
-                  >
-                    {page}
-                  </Button>
-                ))}
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    padding: 2,
+                    fontWeight: 500,
+                    color: "#fff",
+                    display: "block",
+                  }}
+                >
+                  <Link to={"/netflix"}>Home</Link>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    padding: 2,
+                    fontWeight: 500,
+                    color: "#fff",
+                    display: "block",
+                  }}
+                >
+                  <Link to={"/moviesadd"}>Movies</Link>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    padding: 2,
+                    fontWeight: 500,
+                    color: "#fff",
+                    display: "block",
+                  }}
+                >
+                  <Link to={"/movieslist"}>MoviesList</Link>
+                </Button>
               </Box>
 
               <Box sx={{ flexGrow: 0 }}>
-                <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <section class="netflix-profile me-4">
+                <Tooltip>
+                  <IconButton onClick={handleOpenUserMenu}>
+                    <section class="netflix-profile ">
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                         alt="profile"
@@ -176,84 +191,23 @@ function Nav() {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography class="nav-avatar" textAlign="center">
-                        {setting}
-                      </Typography>
-                    </MenuItem>
-                  ))}
+                  <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography class="nav-avatar" textAlign="center">
+                      <Link to="/" className=" nav-link  ">
+                        Profile
+                      </Link>
+
+                      <Link to="/" className=" nav-link ">
+                        Log Out
+                      </Link>
+                    </Typography>
+                  </MenuItem>
                 </Menu>
               </Box>
             </Toolbar>
           </Container>
         </AppBar>
       </div>
-      {/* <nav class="navbar navbar-expand-lg netflix-navbar netflix-padding-left netflix-padding-right">
-        <div class="container-fluid">
-          <div class="netflix-row">
-            <div class="left d-flex align-items-center">
-              <div class="netflix-nav">
-                <section>
-                  <button>Home</button>
-                  <button>TV Shows</button>
-                  <button>Movies</button>
-                  <button>News & Popular</button>
-                  <button>My List</button>
-                </section>
-              </div>
-              <div class="netflix-dropdown-box dropdown">
-                <button
-                  class="netflix-dropdown dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Browse
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      TV Shows
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Movies
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      News & Popular
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      My List
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="right d-flex align-items-center">
-              <i class="bi bi-search"></i>
-              <i class="bi bi-bell-fill"></i>
-              <section class="netflix-profile">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-                  alt="profile"
-                />
-              </section>
-            </div>
-          </div>
-        </div>
-      </nav> */}
     </>
   );
 }

@@ -1,0 +1,131 @@
+.container-list {
+    margin-top: 90px;
+    margin-left: 40px;
+    margin-right: 25px;
+
+}
+
+.css-serial {
+    counter-reset: serial-number;
+    /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+    counter-increment: serial-number;
+    /* Increment the serial number counter */
+    content: counter(serial-number);
+    /* Display the counter */
+}
+
+th {
+    color: #fff;
+}
+
+td {
+    color: #fff !important;
+}
+
+.table-head {
+    margin-top: 60px;
+}
+
+.list-url {
+    max-width: 20px !important;
+    line-break: auto;
+}
+
+.css-jtlhu6-MuiTablePagination-root {
+    overflow: hidden;
+    color: rgb(255 255 255 / 87%);
+    font-size: 0.875rem;
+    background: black;
+}
+
+.url {
+    overflow-wrap: anywhere;
+}
+
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar .MuiTablePagination-actions {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-left: 20px;
+    color: white;
+}
+
+
+
+
+.list-img {
+    object-fit: contain;
+    width: 250px;
+    height: 150px;
+}
+
+
+.list-btn-head {
+    display: flex;
+    width: 111px;
+    margin-right: 15px;
+}
+
+.list-btn-edit,
+.list-btn-delete {
+
+    margin-top: 30px;
+    margin-right: 13px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #f4f4f4;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.list-btn-edit:hover {
+    border: 1px solid #ffbb33;
+    color: #ffbb33;
+}
+
+.list-btn-delete:hover {
+    border: 1px solid #9e0404;
+    color: #920a0a;
+}
+
+.list-desc {
+    width: 350px;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.css-67bhig-MuiTableCell-root {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.01071em;
+    display: table-cell;
+    vertical-align: inherit;
+
+    border-bottom: 1pxsolidrgba(224, 224, 224, 1);
+    text-align: center !important;
+    padding: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.view-head {
+    margin-top: 90px;
+    margin-left: 80px;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}

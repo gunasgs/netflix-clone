@@ -34,8 +34,8 @@ select {
 .info {
     width: 35%;
     position: absolute;
-    left: 50px;
-    bottom: 100px;
+    left: 44px;
+    bottom: 39px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -74,6 +74,11 @@ select {
 
     color: #fff;
 
+}
+
+.play-fea:hover {
+    background-color: #e50914;
+    color: #fff;
 }
 
 .info-fea {
