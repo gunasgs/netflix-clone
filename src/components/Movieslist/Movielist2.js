@@ -74,7 +74,7 @@ function Movielist2() {
   const getMovie = async () => {
     try {
       const res = await axios.get(
-        "https://netflix-app-clone-1.herokuapp.com/movies"
+        "https://zany-pear-clownfish-slip.cyclic.app/movies"
       );
       setview(res.data);
     } catch (err) {
@@ -91,7 +91,7 @@ function Movielist2() {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://netflix-app-clone-1.herokuapp.com/movies/${id}`)
+          .delete(`https://zany-pear-clownfish-slip.cyclic.app/movies/${id}`)
           .then(() => {
             getMovie();
           });

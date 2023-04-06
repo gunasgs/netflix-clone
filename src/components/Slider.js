@@ -8,7 +8,7 @@ function Slider(props) {
     const getMovie = async () => {
       try {
         const res = await axios.get(
-          "https://netflix-app-clone-1.herokuapp.com/movies"
+          "https://zany-pear-clownfish-slip.cyclic.app/movies"
         );
         setMovie(res.data);
       } catch (err) {

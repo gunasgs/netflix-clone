@@ -11,7 +11,7 @@ export default function Featured(type) {
     const getRandomContent = async () => {
       try {
         const res = await axios.get(
-          `https://netflix-app-clone-1.herokuapp.com/movies`
+          `https://zany-pear-clownfish-slip.cyclic.app/movies`
         );
         setmovie(res.data[0]);
       } catch (err) {

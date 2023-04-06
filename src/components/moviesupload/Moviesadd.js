@@ -17,7 +17,7 @@ function Moviesadd() {
     onSubmit: async (values) => {
       try {
         await axios.post(
-          "https://netflix-app-clone-1.herokuapp.com/movies",
+          "https://zany-pear-clownfish-slip.cyclic.app/movies",
           values
         );
       } catch (error) {}

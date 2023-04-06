@@ -17,7 +17,7 @@ function Signin() {
     onSubmit: async (values) => {
       try {
         await axios.post(
-          "https://netflix-app-clone-1.herokuapp.com/signup",
+          "https://zany-pear-clownfish-slip.cyclic.app/signup",
           values
         );
 

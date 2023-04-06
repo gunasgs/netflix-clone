@@ -23,7 +23,7 @@ function Login() {
     onSubmit: async (values) => {
       try {
         let loginData = await axios.post(
-          "https://netflix-app-clone-1.herokuapp.com/signin",
+          "https://zany-pear-clownfish-slip.cyclic.app/signin",
           values
         );
         window.localStorage.setItem("myapptoken", loginData.data.token);
