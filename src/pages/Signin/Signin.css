@@ -1,6 +1,5 @@
 .signin-container {
     width: 100%;
-
     position: relative;
     overflow: hidden;
     background:
@@ -13,7 +12,6 @@
 .signin-container ::after {
     content: "";
     position: absolute;
-
     top: 0;
     left: 0;
     width: 100%;
@@ -43,6 +41,7 @@
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border-radius: 10px;
+
 }
 
 .form-check-label {
@@ -165,4 +164,23 @@
 .btn-icon {
     margin-right: 10px;
 
+}
+@media only screen and (max-width: 600px) {
+    .signin-top {
+        position: relative;
+      
+    }
+   .res-row{
+    margin:0 5px !important ;
+   }
+    .signin-top img {
+        width: 200px;
+        height: 120px;
+ 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
 }

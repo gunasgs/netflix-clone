@@ -1,11 +1,11 @@
 import React from "react";
-
+import "./Feature.css";
 function Footer() {
   return (
     <div class="container-fluid netflix-footer ">
       <div class="row mt-4 ">
-        <div class="col-md-10 col-sm-8 ">
-          <div class="row ms-5">
+        <div class="col-md-10 ">
+          <div class="row ">
             <div class="col-md-3">
               <ul>
                 <li>Audio and Subtitle</li>

@@ -40,10 +40,10 @@ function Signin() {
 
         <section class="vh-100 ">
           <div class=" signin-container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-              <div class="col-12 col-md-8 col-lg-4 col-xl-4">
-                <div class="signin-card  text-white">
-                  <div class=" p-5 ">
+            <div class="row d-flex justify-content-center align-items-center h-100 res-row ">
+              <div class="col-sm-12 col-md-8 col-lg-4 col-xl-4 px-0 ">
+                <div class="signin-card  text-white ">
+                  <div class=" p-5  ">
                     <div class="mb-md-5 mt-md-4 ">
                       <h2 class="fw-bold mb-3 ">Sign Up</h2>
                       <form onSubmit={formik.handleSubmit}>

@@ -98,15 +98,13 @@ function Login() {
             </form>
           )}
           <div className="text-white mt-4">
-            <h5>
-              {" "}
-              Email : user@gmail.com{" "}
-              <span className="ms-5">Password : user</span>
+            <h5 className="res-h5">
+              Email : user@gmail.com
+              <span className="ms-5 res-span">Password : user</span>
             </h5>
           </div>
         </div>
       </header>
-
       <section className="style-cards">
         <div className="card-1">
           <div className="desc-1">
@@ -166,7 +164,6 @@ function Login() {
           </div>
         </div>
       </section>
-
       <section className="lastsec">
         <div className="faq">
           <h1>Frequently Asked Questions</h1>
