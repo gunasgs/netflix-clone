@@ -1,51 +1,89 @@
 import React from "react";
 import "./Feature.css";
+import { BsGlobe2 } from "react-icons/bs";
+import { AiFillCaretDown } from "react-icons/ai";
 function Footer() {
   return (
-    <div class="container-fluid netflix-footer ">
-      <div class="row mt-4 ">
-        <div class="col-md-10 ">
-          <div class="row ">
-            <div class="col-md-3">
-              <ul>
-                <li>Audio and Subtitle</li>
-                <li>Media Center</li>
-                <li>Privacy</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <ul>
-                <li>Audio description</li>
-                <li>Investor Relation</li>
-                <li>Terms and Conditions</li>
-                <li>Legal Notices</li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <ul>
-                <li>Help Center</li>
-                <li>Jobs</li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <ul>
-                <li>Gift card</li>
-                <li>Subscription</li>
-              </ul>
-            </div>
+    <div className="footer-container">
+      <footer className="footer">
+        <div className="footer-1">
+          <p>Questions? Call 000-800-040-1843</p>
+          <div className="footer-cols">
+            <ul>
+              <li>
+                <a href=" ">FAQ</a>
+              </li>
+              <li>
+                <a href=" ">Investor Relations</a>
+              </li>
+              <li>
+                <a href=" ">Privacy</a>
+              </li>
+              <li>
+                <a href=" ">Speed Test</a>
+              </li>
+              <li>
+                <button className="footer-btn">
+                  <BsGlobe2 className="btn-icon" />
+                  English <AiFillCaretDown />
+                </button>
+              </li>
+              <li className="brand">
+                <div className="copyright">
+                  Designed by &copy;
+                  <a
+                    href="https://gunaseelan.netlify.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ms-2"
+                  >
+                    Gunasgs
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=" ">Help Centre</a>
+              </li>
+              <li>
+                <a href=" ">Jobs</a>
+              </li>
+              <li>
+                <a href=" ">Cookie Preferences</a>
+              </li>
+              <li>
+                <a href=" ">Legal Notices</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=" ">Account</a>
+              </li>
+              <li>
+                <a href=" ">Ways to Watch</a>
+              </li>
+              <li>
+                <a href=" ">Corporate Information</a>
+              </li>
+              <li>
+                <a href=" ">Only on Netflix</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=" ">Media Centre</a>
+              </li>
+              <li>
+                <a href=" ">Terms of Use</a>
+              </li>
+              <li>
+                <a href=" ">Contact Us</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-10 ">
-          <div class="row ms-5">
-            <div class="col">
-              <span class="copy-right ">@ Netflix Copyright</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      </footer>
     </div>
   );
 }
