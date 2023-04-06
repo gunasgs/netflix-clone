@@ -140,11 +140,12 @@ span {
     background-color: transparent;
     color: #adadad;
     border: 0.5px solid #818181;
-    padding: 10px 20px;
+    padding: 1px 8px !important;
     margin-top: 18px;
     font-size: 18px;
     display: flex;
     align-items: center;
+    text-decoration: none !important;
 }
 
 .btn-icon {
@@ -174,8 +175,8 @@ span {
 
 .footer,
 .footer a {
-    color: #757575;
-    font-size: 1rem;
+    color: #ffffff;
+    font-size: 14px;
 
 }
 
@@ -208,7 +209,7 @@ span {
     background-color: transparent;
     color: #adadad;
     border: 0.5px solid #818181;
-    padding: 8px 10px;
+    padding: 2px 4px;
     margin-top: 18px;
     font-size: 16px;
     display: flex;

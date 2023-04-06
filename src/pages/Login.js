@@ -220,7 +220,10 @@ function Login() {
       <div className="footer-container">
         <footer className="footer">
           <div className="footer-1">
-            <p>Questions? Call 000-800-040-1843</p>
+            <p>
+              Questions? Call{" "}
+              <span className="footer-no">000-800-040-1843</span>
+            </p>
             <div className="footer-cols">
               <ul>
                 <li>

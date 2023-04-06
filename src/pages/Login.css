@@ -76,19 +76,20 @@ img {
     font-size: 16px;
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid #f4f4f4;
-    padding: 5px 6px;
+    border: 0.5px solid #c9c8c8;
+    padding: 5px 5px;
     display: flex;
     align-items: center;
     cursor: pointer;
-
+border-radius: 5px;
 }
 
 .head-btn3 {
     display: inline-block;
     background: #e50914;
+    border-radius: 5px;
     color: white;
-    padding: 7px 1.2rem;
+    padding: 7px 15px;
     font-size: 16px;
     text-align: center;
     border: none;
@@ -114,7 +115,7 @@ img {
 
 .showcase-top {
     display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
     position: relative;
     z-index: 2;
     height: 90px;
@@ -201,6 +202,7 @@ p {
     border: none;
     padding: 0 10px;
     outline: none;
+   
 }
 
 .inp-2 {
@@ -492,18 +494,19 @@ p {
 
 .footer,
 .footer a {
-    color: #757575;
-    font-size: 1rem;
+    color: #d8d8d8 !important;
+    font-size: 14px;
 
 }
 
 .brand {
     margin-top: 20px;
+    text-decoration: none !important;
 }
 
 .footer p {
     margin-bottom: 1.5rem;
-    color: #757575;
+    color: #fcfcfc !important;
     margin-left: 35px;
 
 }
@@ -519,18 +522,21 @@ p {
 
 .footer li {
     line-height: 2.4;
-
+    text-decoration: underline;
 }
-
+.footer-no{
+    text-decoration: underline;
+}
 .footer-btn {
     background-color: transparent;
     color: #adadad;
     border: 0.5px solid #818181;
-    padding: 10px 20px;
-    margin-top: 18px;
+    padding: 5px 2px !important;
+
     font-size: 18px;
     display: flex;
     align-items: center;
+    text-decoration: none !important;
 }
 
 .btn-icon {
